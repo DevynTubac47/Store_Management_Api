@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const categorySchema = new Schema({
+const categorySchema = Schema({
     nameCategory:{
         type: String,
         required: [true, "Name category is required"],
@@ -9,6 +9,10 @@ const categorySchema = new Schema({
     descriptionCategory:{
         type:String,
         required: true
+    },
+    status:{
+        type: Boolean,
+        default: true
     },
 },{
     timestamps: true,

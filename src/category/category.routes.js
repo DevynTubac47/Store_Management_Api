@@ -1,12 +1,16 @@
 import { Router } from "express";
-import { addCategory, getCategory } from "./category.controller.js";
-import { createdCategory } from "../middlewares/category-validators.js";
+import { addCategory, deleteCategory, getCategory, updateCategory } from "./category.controller.js";
+import { createdCategoryValidator, deleteCategoryValidator, updateCategoryValidator } from "../middlewares/category-validators.js";
 
 const router = Router();
 
-router.post("/addCategory", createdCategory, addCategory);
+router.post("/addCategory", createdCategoryValidator, addCategory);
 
 router.get("/", getCategory);
+
+router.patch("/updateCategory/:id", updateCategoryValidator, updateCategory)
+
+router.delete("/deleteCategory/:id", deleteCategoryValidator, deleteCategory)
 
 export default router;
 

@@ -28,7 +28,6 @@ export const addCategory = async (req, res)=>{
 export const getCategory = async (req, res) => {
     try{
         const { limite = 5, desde = 0 } = req.query
-        const query = { status: true }
 
         const [total, categorys ] = await Promise.all([
             Category.countDocuments(query),
@@ -40,12 +39,68 @@ export const getCategory = async (req, res) => {
         return res.status(200).json({
             success: true,
             total,
-            category
+            categorys
         })
     }catch(error){
         return res.status(500).json({
             success: false,
-            message: "Error al obtener los usuarios",
+            message: "Error getting list of categories",
+            error: error.message
+        })
+    }
+}
+
+export const updateCategory = async(req, res) => {
+    try{
+        const { id } = req.params;
+        const { newDescription } = req.body;
+
+        const categoryExists = await Category.findById(id);
+        if (!categoryExists) {
+            return res.status(404).json({
+                success: false,
+                message: 'Category not found'
+            });
+        }
+        const categoryUpdate = await Category.findByIdAndUpdate(id, { descriptionCategory: newDescription },{new:true})
+        
+        res.status(200).json({
+            success: true,
+            message: 'Updated Category',
+            category: categoryUpdate,
+        });
+    }catch(error){
+        res.status(500).json({
+            success: false,
+            message: 'Error updating category',
+            error: error.message
+        })
+    }
+}
+
+export const deleteCategory = async (req, res) => {
+    try{
+        const { id } = req.params
+
+        const categoryExists = await Category.findById(id);
+        if (!categoryExists) {
+            return res.status(404).json({
+                success: false,
+                message: 'Category not found'
+            });
+        }
+
+        await Category.findByIdAndDelete(id)
+        return res.status(200).json({
+            sucess: true,
+            message: "Delete Category",
+            category: categoryExists
+        })
+
+    }catch(error){
+        return res.status(500).json({
+            success: false,
+            message: 'Error deleting category',
             error: error.message
         })
     }
