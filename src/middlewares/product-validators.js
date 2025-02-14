@@ -15,3 +15,9 @@ export const createdProductValidator = [
     deleteFileOnError,
     handleErrors
 ]
+
+export const getProductByIdValidator = [
+    param("uid").isMongoId().withMessage("It is not a valid ID"),
+    validarCampos,
+    handleErrors
+]

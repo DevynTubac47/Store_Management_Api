@@ -28,6 +28,7 @@ export const addCategory = async (req, res)=>{
 export const getCategory = async (req, res) => {
     try{
         const { limite = 5, desde = 0 } = req.query
+        const query = {}
 
         const [total, categorys ] = await Promise.all([
             Category.countDocuments(query),
