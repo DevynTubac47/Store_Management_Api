@@ -1,5 +1,5 @@
 import { body, param } from "express-validator";
-import { emailExists, usernameExists, userExists } from "../helpers/db-validators.js";
+import { emailExists, usernameExists, userExists, adminRol, adminRolDelete } from "../helpers/db-validators.js";
 import { validarCampos } from "./validate-fields.js";
 import { deleteFileOnError } from "./delete-file-on-error.js";
 import { handleErrors } from "./handle-errors.js";
@@ -38,22 +38,18 @@ export const updateRolValidator = [
     hasRoles("ADMIN_ROLE"),
     param("uid", "It is not a valid ID").isMongoId(),
     param("uid").custom(userExists),
+    param("uid").custom(adminRol),
     validarCampos,
     handleErrors
 ]
 
-export const getUserByIdValidator = [
-    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
-    param("uid").custom(userExists),
-    validarCampos,
-    handleErrors
-]
 
 export const deleteUserValidator = [
     validateJWT,
     hasRoles("ADMIN_ROLE"),
     param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("uid").custom(userExists),
+    param("uid").custom(adminRolDelete),
     validarCampos,
     handleErrors
 ]
@@ -70,6 +66,21 @@ export const updateUserValidator = [
     validateJWT,
     hasRoles("ADMIN_ROLE"),
     param("uid", "No es un ID válido").isMongoId(),
+    param("uid").custom(userExists),
+    param("uid").custom(adminRol),
+    validarCampos,
+    handleErrors
+]
+
+export const updateProfileAdminValidator = [
+    param("uid", "No es un ID válido").isMongoId(),
+    param("uid").custom(userExists),
+    validarCampos,
+    handleErrors
+]
+
+export const deleteProfileValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("uid").custom(userExists),
     validarCampos,
     handleErrors

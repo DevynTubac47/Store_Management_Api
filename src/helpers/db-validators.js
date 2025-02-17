@@ -21,3 +21,32 @@ export const userExists = async (uid = " ") => {
     }
 }
 
+export const adminRol = async (uid = "", { req }) => {
+    if(!req.usuario || !req.usuario.role) {
+        throw new Error("No se pudo verificar el rol del usuario"); 
+    }
+
+    const userModify = await User.findById(uid);
+    if (!userModify) {
+        throw new Error("Usuario no encontrado");
+    }
+
+    if (userModify.role === "ADMIN_ROLE" && req.usuario.role === "ADMIN_ROLE") {
+        throw new Error("No tienes permisos para modificar a otro admin");
+    }
+};
+
+export const adminRolDelete = async (uid = "", { req }) => {
+    if(!req.usuario || !req.usuario.role) {
+        throw new Error("No se pudo verificar el rol del usuario"); 
+    }
+
+    const userModify = await User.findById(uid);
+    if (!userModify) {
+        throw new Error("Usuario no encontrado");
+    }
+
+    if (userModify.role === "ADMIN_ROLE" && req.usuario.role === "ADMIN_ROLE") {
+        throw new Error("No tienes permisos para eliminar a otro admin");
+    }
+};
