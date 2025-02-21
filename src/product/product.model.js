@@ -18,7 +18,7 @@ const productSchema = new Schema({
     stock:{
         type: Number
     },
-    keeper:{
+    category:{
         type: Schema.Types.ObjectId,
         ref: 'category',
         required: true

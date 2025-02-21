@@ -1,5 +1,5 @@
 import { body, param } from "express-validator";
-import { adminRolValidator, emailExists, usernameExists, userExists } from "../helpers/db-validators.js";
+import { emailExists, usernameExists, userExists } from "../helpers/db-validators.js";
 import { validarCampos } from "./validate-fields.js";
 import { deleteFileOnError } from "./delete-file-on-error.js";
 import { handleErrors } from "./handle-errors.js";
@@ -93,7 +93,6 @@ export const updateUserValidator = [
     hasRoles("ADMIN_ROLE"),
     param("uid", "No es un ID válido").isMongoId(),
     param("uid").custom(userExists),
-    param("uid").custom(adminRolValidator),
     validarCampos,
     handleErrors
 ]
