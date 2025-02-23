@@ -18,11 +18,18 @@ export const createdProductValidator = [
     handleErrors
 ]
 
-export const getProductByIdValidator = [
-    param("uid").isMongoId().withMessage("It is not a valid ID"),
+export const getProductByNameValidator = [
+    body("nameProduct").custom(nameProductExists),
     validarCampos,
     handleErrors
 ]
+
+export const getProductSouldOutValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),
+    validarCampos,
+    handleErrors
+]    
 
 export const updateProductValidator = [
     validateJWT,

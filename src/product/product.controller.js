@@ -37,10 +37,10 @@ export const addProduct = async (req, res) => {
     }
 }
 
-export const getProductById = async (req, res) => {
+export const getProductByName = async (req, res) => {
     try{
-        const { uid } = req.params;
-        const product = await Product.findById(uid)
+        const { nameProduct } = req.params;
+        const product = await Product.findOne({ nameProduct: nameProduct }).populate("category", "nameCategory");
 
         if(!product){
             return res.status(404).json({
@@ -58,14 +58,14 @@ export const getProductById = async (req, res) => {
         return res.status(500).json({
             success: false,
             message: 'Error when searching for the product',
-            error: error.menssge
+            error: error.message
         })
     }
 }
 
 export const getProduct = async (req, res) =>{
     try{
-        const products = await Product.find()
+        const products = await Product.find().populate("category", "nameCategory");
 
         return res.status(200).json({
             success: true,
@@ -106,6 +106,24 @@ export const getProductbyCategory = async (req, res) => {
         return res.status(500).json({
             success: false,
             message: 'Error when displaying the product catalog by category.',
+            error: error.menssge
+        })
+    }
+}
+
+export const getProductSouldOut = async (req, res) => {
+    try{
+        const products = await Product.find({stock: 0})
+
+        res.status(200).json({
+            success: true,
+            total: products.length,
+            products
+        })   
+    }catch(error){
+        return res.status(500).json({
+            success: false,
+            message: 'Error when displaying the product catalog.',
             error: error.menssge
         })
     }

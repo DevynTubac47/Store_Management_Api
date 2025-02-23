@@ -1,5 +1,6 @@
 'use strict';
 
+import Product from "../product/product.model.js";
 import Category from "./category.model.js";
 
 export const addCategory = async (req, res)=>{
@@ -92,6 +93,10 @@ export const deleteCategory = async (req, res) => {
         }
 
         await Category.findByIdAndDelete(id)
+
+        const categoryDefault = await Category.findOne({ nameCategory: "General" });
+        await Product.updateMany({ category: id }, { category: categoryDefault._id });
+
         return res.status(200).json({
             sucess: true,
             message: "Delete Category",
@@ -105,4 +110,13 @@ export const deleteCategory = async (req, res) => {
             error: error.message
         })
     }
+}
+
+export const categoryDefault = async (req, res) => {
+    const category = await Category.findOne({ nameCategory: "General" });
+        if (!category) {
+            await Category.create({
+                nameCategory: "General",
+                descriptionCategory: "Esta categoría agrupa productos que no tienen una clasificación específica o que aún no han sido asignados a una categoría definida.",});
+        }
 }
