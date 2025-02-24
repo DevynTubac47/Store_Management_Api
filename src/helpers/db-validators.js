@@ -58,3 +58,22 @@ export const nameProductExists = async (nameProduct = "") => {
         throw new Error(`The product name ${nameProduct} is already registered`)
     }
 }
+
+export const userUpdateProfile = async (uid = "", { req }) => {
+    try{   
+        if (!req.usuario) {
+            throw new Error("Usuario no autenticado");
+        }
+
+        const user = await User.findById(uid);
+        if(!user) {
+            throw new Error("User not found");
+        }
+
+        if (user._id.toString() !== req.usuario._id.toString()){
+            throw new Error("You can't update this profile");
+        }
+    }catch(error){
+        throw new Error(error.message);
+    }
+};
