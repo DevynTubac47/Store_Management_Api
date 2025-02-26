@@ -162,6 +162,13 @@ export const updatePassword = async (req, res) => {
         const { uid } = req.params;
         const { oldPassword, newPassword } = req.body;
 
+        if (req.usuario._id.toString() !== uid) {
+            return res.status(403).json({
+                success: false,
+                message: 'You are not authorized to delete this user',
+            });
+        }
+
         const user = await User.findById(uid);
         if (!user) {
             return res.status(404).json({
@@ -206,6 +213,13 @@ export const updateProfilePicture = async (req, res) => {
     try {
         const { uid } = req.params;
         let newProfilePicture = req.file ? req.file.filename : null;
+
+        if (req.usuario._id.toString() !== uid) {
+            return res.status(403).json({
+                success: false,
+                message: 'You are not authorized to delete this user',
+            });
+        }
 
         if (!newProfilePicture) {
             return res.status(400).json({

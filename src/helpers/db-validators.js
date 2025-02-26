@@ -32,6 +32,10 @@ export const adminRol = async (uid = "", { req }) => {
         throw new Error("Usuario no encontrado");
     }
 
+    if (req.usuario._id.toString() === uid) {
+        return; 
+    }
+
     if (userModify.role === "ADMIN_ROLE" && req.usuario.role === "ADMIN_ROLE") {
         throw new Error("No tienes permisos para modificar a otro admin");
     }
@@ -45,6 +49,10 @@ export const adminRolDelete = async (uid = "", { req }) => {
     const userModify = await User.findById(uid);
     if (!userModify) {
         throw new Error("Usuario no encontrado");
+    }
+
+    if (req.usuario._id.toString() === uid) {
+        return; 
     }
 
     if (userModify.role === "ADMIN_ROLE" && req.usuario.role === "ADMIN_ROLE") {
