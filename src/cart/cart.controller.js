@@ -13,6 +13,20 @@ export const addProductCart = async (req, res) => {
             })
         }
 
+        if(product.stock === 0){
+            return res.status(400).json({
+                success: false,
+                message: "Product out of stock"
+            })
+        }
+
+        if(quantity > product.stock){
+            return res.status(400).json({
+                success: false,
+                message: 'There are few units available.'
+            })
+        }
+
         let cart = await Cart.findOne({ user: req.usuario._id });
 
         if(!cart){
