@@ -10,6 +10,7 @@ import categoryRoutes from "../src/category/category.routes.js"
 import authRoutes from "../src/auth/auth.router.js"
 import userRoutes from "../src/user/user.router.js"
 import productRoutes from "../src/product/product.routes.js"
+import cartRoutes from "../src/cart/cart.router.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -26,6 +27,7 @@ const routes = (app) =>{
     app.use("/storeManagement/v1/auth/client", authRoutes)
     app.use("/storeManagement/v1/user", userRoutes)
     app.use("/storeManagement/v1/product", productRoutes)
+    app.use("/storeManagement/v1/shoopingCart", cartRoutes)
 }
 
 const conectarDB = async () =>{
