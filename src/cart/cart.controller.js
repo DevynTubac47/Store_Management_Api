@@ -23,7 +23,7 @@ export const addProductCart = async (req, res) => {
         if(quantity > product.stock){
             return res.status(400).json({
                 success: false,
-                message: 'There are few units available.'
+                message: `There are few units available for the product ${product.nameProduct}`
             })
         }
 
