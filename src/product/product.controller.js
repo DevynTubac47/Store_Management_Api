@@ -40,7 +40,7 @@ export const addProduct = async (req, res) => {
 export const getProductByName = async (req, res) => {
     try{
         const { nameProduct } = req.params;
-        const product = await Product.findOne({ nameProduct: nameProduct }).populate("category", "nameCategory");
+        const product = await Product.findOne({ nameProduct: nameProduct }).populate("category", "nameCategory -_id");
 
         if(!product){
             return res.status(404).json({
@@ -173,6 +173,26 @@ export const deleteProduct = async (req, res) => {
         return res.status(500).json({
             success: false,
             message: 'Error deleting product',
+            error: error.message
+        })
+    }
+}
+
+export const getTopSellingProducts = async (req, res) => {
+    try{
+        const topSellingProducts = await Product.find().sort({sales: -1}).limit(10);
+
+        return res.status(200).json({
+            success: true,
+            message: 'Top selling products',
+            total: topSellingProducts.length,
+            topSellingProducts
+        })
+
+    }catch(error){
+        return res.status(500).json({
+            success: false,
+            message: 'Error getting top selling products',
             error: error.message
         })
     }

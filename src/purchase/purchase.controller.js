@@ -26,6 +26,7 @@ export const completePurchase = async (req, res) => {
                 })
             }
             product.stock -= item.quantity;
+            product.sales += item.quantity;
             await product.save();
 
             const productTotal = product.price * item.quantity;

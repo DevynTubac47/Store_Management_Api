@@ -1,83 +1,87 @@
-import Invoice from "./invoice.model.js";
+import Invoice from "../invoice/invoice.model.js";
 import Product from "../product/product.model.js";
 
 export const updateInvoice = async (req, res) => {
-    try{
-        const { id } = req.params;
-        const data = req.body;
+    try {
+        const { nameProduct, quantity, price } = req.body.products[0]; 
+        const { id } = req.params;  
 
-        const invoice = await Invoice.findById(id);
-        if(!invoice){
-            return res.status(404).json({
+        if (quantity <= 0 || price <= 0) {
+            return res.status(400).json({
                 success: false,
-                message: "Invoice not found"
-            })
-        } 
-
-        let total = 0;
-
-        if(data.products){
-            for(const updateProduct of data.products){
-
-                const product = await Product.findOne({nameProduct: updateProduct.nameProduct})
-                if(!product){
-                    return res.status(404).json({
-                        success: false,
-                        message: "Product not found"
-                    })
-                }
-                const existingProduct = invoice.products.find(p => p.product && p.product.toString() === product._id.toString());
-
-
-                if(existingProduct){
-                    const quantity = updateProduct.quantity - existingProduct.quantity;
-                
-                    if(product.stock < quantity){
-                        return res.status(400).json({
-                            success: false,
-                            message: `There are few units available for the product ${product.nameProduct}`
-                        })
-                    }
-
-                    product.stock -= quantity;
-                    await product.save();
-                    
-                    existingProduct.quantity = updateProduct.quantity;
-                    existingProduct.totalProduct = product.price * updateProduct.quantity;
-                } else {
-                    if (product.stock < updateProduct.quantity) {
-                        return res.status(400).json({
-                            success: false,
-                            message: `There are not enough units available for the product ${product.nameProduct}`
-                        });
-                    }
-
-                    product.stock -= updateProduct.quantity;
-                    await product.save();
-
-                    invoice.products.push({
-                        product: product._id,
-                        quantity: updateProduct.quantity,
-                        totalProduct: product.price * updateProduct.quantity
-                    });
-                }
-            }
+                message: "Quantity and price must be greater than 0"
+            });
         }
 
-        total = invoice.products.reduce((acc, product) => acc + product.totalProduct, 0);
-        invoice.total = total;
+        const product = await Product.findOne({ nameProduct });
+        if (!product) {
+            return res.status(400).json({
+                success: false,
+                message: "Product not found"
+            });
+        }
 
-        await invoice.save();
+        const invoice = await Invoice.findById(id); 
+        if (!invoice) {
+            return res.status(400).json({
+                success: false,
+                message: "Invoice not found"
+            });
+        }
+
+        const productInInvoice = invoice.products.find(p => p.nameProduct === nameProduct);
+        if (!productInInvoice) {
+            return res.status(400).json({
+                success: false,
+                message: `Product ${nameProduct} not found in invoice`
+            });
+        }
+
+        productInInvoice.product = product._id;  
+        productInInvoice.quantity = quantity;
+        productInInvoice.price = price;
+        productInInvoice.totalProduct = quantity * price;
+
+        invoice.total = invoice.products.reduce((acc, curr) => acc + curr.totalProduct, 0);
+
+        const updatedInvoice = await invoice.save();
+
         return res.status(200).json({
             success: true,
-            message: "Invoice updated",
-            invoiceUpdated
-        })
-    }catch(error){
+            message: "Product updated in invoice",
+            updatedInvoice
+        });
+    } catch (error) {
         return res.status(500).json({
             success: false,
-            message: "Error updating invoice",
+            message: "Error updating product in invoice",
             error: error.message
-        })
+        });
+    }
+};
+
+export const getInvoiceByUser = async (req, res) => {
+    try {
+        const invoices = await Invoice.find({ user: req.usuario._id }).populate({
+            path: "products.product",
+            select: "nameProduct price category  -_id",
+            populate: { 
+                path: "category", 
+                select: "nameCategory -_id" 
+            }
+        });
+
+        return res.status(200).json({
+            success: true,
+            message: "Invoices by user",
+            total: invoices.length,
+            invoices
+        });
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting invoices by user",
+            error: error.message
+        });
     }
 }

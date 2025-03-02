@@ -14,3 +14,9 @@ export const updateInvoiceValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const getInvoiceByUserValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]

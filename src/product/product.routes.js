@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { uploadProfilePicture } from "../middlewares/multer-uploads.js";
 import { createdProductValidator, deleteProductValidator, updateProductValidator, getProductByNameValidator, getProductSouldOutValidator} from "../middlewares/product-validators.js";
-import { addProduct, deleteProduct, getProduct, getProductbyCategory, getProductByName, updateProduct, getProductSouldOut } from "./product.controller.js";
+import { addProduct, deleteProduct, getProduct, getProductbyCategory, getProductByName, updateProduct, getProductSouldOut, getTopSellingProducts } from "./product.controller.js";
 
 const router = Router()
 
@@ -12,5 +12,6 @@ router.get("/productCatalog/category/:uid", getProductbyCategory)
 router.get("/souldOut/", getProductSouldOutValidator, getProductSouldOut)
 router.put("/updateProduct/:uid", updateProductValidator, updateProduct)
 router.delete("/deleteProduct/:uid", deleteProductValidator, deleteProduct)
+router.get("/topSellingProducts", getTopSellingProducts)
 
 export default router;

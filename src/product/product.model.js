@@ -26,6 +26,10 @@ const productSchema = new Schema({
     imageProduct:{
         type:String
     },
+    sales: {
+        type: Number,
+        default: 0
+    },
     status: {
         type: Boolean,
         default: true

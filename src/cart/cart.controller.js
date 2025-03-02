@@ -57,7 +57,7 @@ export const addProductCart = async (req, res) => {
 
 export const getShoopingCart = async (req, res) => {
     try{
-        const shoopingCart = await Cart.findOne({ user: req.usuario._id }).populate("products.product", "nameProduct price");
+        const shoopingCart = await Cart.findOne({ user: req.usuario._id }).populate("products.product", "nameProduct price -_id");
         if(!shoopingCart){
             return res.status(400).json({
                 success: false,

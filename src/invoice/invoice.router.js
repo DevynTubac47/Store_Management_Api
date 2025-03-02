@@ -1,9 +1,10 @@
 import { Router } from 'express';
-import { updateInvoiceValidator } from '../middlewares/invoice-validator.js';
-import { updateInvoice } from './invoice.controller.js';
+import { getInvoiceByUserValidator, updateInvoiceValidator } from '../middlewares/invoice-validator.js';
+import { updateInvoice,getInvoiceByUser } from './invoice.controller.js';
 
 const router = Router();
 
-router.put("/updateInvoice/:id", updateInvoice)
+router.put("/updateInvoice/:id", updateInvoiceValidator, updateInvoice)
+router.get("/invoices", getInvoiceByUserValidator, getInvoiceByUser)
 
 export default router;
