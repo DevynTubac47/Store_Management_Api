@@ -87,3 +87,20 @@ export const login = async (req, res) => {
         })
     }
 }
+
+export const addAdminDefault = async() => {
+    const admin = await User.findOne({ role: "ADMIN_ROLE"})
+    if(!admin) {
+        const profilePicture = "pictureAdmin.jpg";
+        await User.create({
+            name: "Admin",
+            surname: "Kinal",
+            username: "Admin",
+            email: "admin@gmail.com",
+            password: await hash("123456789"),
+            role: "ADMIN_ROLE",
+            phone: "12345678",
+            profilePicture: profilePicture
+        })
+    }
+}

@@ -1,0 +1,1328 @@
+{
+	"info": {
+		"_postman_id": "6168a4ee-a5ad-4572-85c8-92dbd7eed9c4",
+		"name": "Store Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37640614"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Agregar Categoría",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameCategory\":\"Floristeria2\",\r\n    \"descriptionCategory\": \"Cuidado de Flores\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/admin/category/addCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"admin",
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categorías",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/admin/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"admin",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Categoría",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newDescription\":\"Hola Mundo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/admin/category/updateCategory/67ad87b2a065daa6c1ff8312",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"admin",
+								"category",
+								"updateCategory",
+								"67ad87b2a065daa6c1ff8312"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Categoría",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3NDAzNTA5OTUsImV4cCI6MTc0MDM1NDU5NX0.pq-uD6rcqEOlagqaNfjz-8YPQFjG9G2m-dBeBZPmx8c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/admin/category/deleteCategory/67ad87eba065daa6c1ff8314",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"admin",
+								"category",
+								"deleteCategory",
+								"67ad87eba065daa6c1ff8314"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Actualizar Rol",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODZjNzZlN2IyZjM2ZjNjY2RlZjMiLCJpYXQiOjE3NDA1Mzk2MDksImV4cCI6MTc0MDU0MzIwOX0.WYKzsGKuDSlyZDYx0m3AcbI_GkAMguN8F3WANU0Thbo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rol\":\"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/user/updateRol/67be86596e7b2f36f3ccdeeb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"user",
+								"updateRol",
+								"67be86596e7b2f36f3ccdeeb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3Mzk3NTkzNjIsImV4cCI6MTczOTc2Mjk2Mn0.1OVF6NVNdQAqq0orgMv58Ct_nnx24w5dJY6pDcyLMc4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"1dasda\",\r\n    \"surname\":\"dadasdasd\",\r\n    \"username\":\"devdsa5\",\r\n    \"phone\":\"098765432\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/user/updateUser/67b13e9fc0c56d15bc513b7a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"user",
+								"updateUser",
+								"67b13e9fc0c56d15bc513b7a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODZjNzZlN2IyZjM2ZjNjY2RlZjMiLCJpYXQiOjE3NDA1NDIwOTYsImV4cCI6MTc0MDU0NTY5Nn0.gkUBA6i2pQox45NUCiuCKtkoXhe9n7RA9MRHHVpzaek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"1dasda\",\r\n    \"phone\":\"098765432\",\r\n    \"email\": \"das@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/user/updateProfile/67be86e26e7b2f36f3ccdef9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"user",
+								"updateProfile",
+								"67be86e26e7b2f36f3ccdef9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3Mzk3NjEzMTgsImV4cCI6MTczOTc2NDkxOH0.0QBXG37qUJWzddiXytl7aPBOYoznN0Acqr6906ItP3U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/user/deleteUser/67b1402fc0c56d15bc513b82",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"user",
+								"deleteUser",
+								"67b1402fc0c56d15bc513b82"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA1Mzg4NTQsImV4cCI6MTc0MDU0MjQ1NH0.sgqAVhbLHcwnOzsLQqAUpunf2_uZy0oyqbYTXbe7Dq0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"confirmDeletion\":\"DELETE_PROFILE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/user/deleteProfile/67be80bae28341c1fc728090",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"user",
+								"deleteProfile",
+								"67be80bae28341c1fc728090"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Contraseña",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3NDAzNTc3NjQsImV4cCI6MTc0MDM2MTM2NH0.F5rH_ZtzJDqTsWAPAhygImO3RTsTU6comFVje5nuZyE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"12345678\",\r\n    \"newPassword\": \"0987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/user/updatePassword/67ae82dcdab184fb505aaeea",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"user",
+								"updatePassword",
+								"67ae82dcdab184fb505aaeea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Foto de Perfil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYzRmYzkzYzdlMDZhYjhiNzI4OGYiLCJpYXQiOjE3NDAzNTg5MTksImV4cCI6MTc0MDM2MjUxOX0.p5CFCgrG7edDucspTJ4GT-AEhLdptJ5IgeitwXsjs2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/devyn/OneDrive/Pictures/descarga.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/user/updateProfilePicture/67bbc4fc93c7e06ab8b7288f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"user",
+								"updateProfilePicture",
+								"67bbc4fc93c7e06ab8b7288f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Actualizar Producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3NDAxMTExNDgsImV4cCI6MTc0MDExNDc0OH0.b3tRXv-qRuI35VziKVWqlVxH-GrHjWWvEtXiBFSPBMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameProduct\":\"pepsi\",\r\n    \"price\":\"100.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/updateProduct/67aee2851c53a999d2b92aa0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"updateProduct",
+								"67aee2851c53a999d2b92aa0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3NDAzNTA5OTUsImV4cCI6MTc0MDM1NDU5NX0.pq-uD6rcqEOlagqaNfjz-8YPQFjG9G2m-dBeBZPmx8c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nameProduct",
+									"value": "Pollo ",
+									"type": "text"
+								},
+								{
+									"key": "descriptionProduct",
+									"value": "Hola",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "nameCategory",
+									"value": "Floristeria",
+									"type": "text"
+								},
+								{
+									"key": "imageProduct",
+									"type": "file",
+									"src": "/C:/Users/devyn/OneDrive/Pictures/descarga.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Producto por Nombre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3Mzk1MTQ3NDksImV4cCI6MTczOTUxODM0OX0.coQL4U6pjsDyoo2l1Z-mR5sNtzOsxfY9KOgJyU9hLqY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nameProduct",
+									"value": "Coca Cola",
+									"type": "text"
+								},
+								{
+									"key": "descriptionProduct",
+									"value": "dasdasdsa",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "Floristeria",
+									"type": "text"
+								},
+								{
+									"key": "imageProduct",
+									"type": "file",
+									"src": "/C:/Users/devyn/OneDrive/Pictures/descarga.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/findProduct/Seven1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"findProduct",
+								"Seven1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Catalogo de Productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3Mzk1MTQ3NDksImV4cCI6MTczOTUxODM0OX0.coQL4U6pjsDyoo2l1Z-mR5sNtzOsxfY9KOgJyU9hLqY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nameProduct",
+									"value": "Coca Cola",
+									"type": "text"
+								},
+								{
+									"key": "descriptionProduct",
+									"value": "dasdasdsa",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "Floristeria",
+									"type": "text"
+								},
+								{
+									"key": "imageProduct",
+									"type": "file",
+									"src": "/C:/Users/devyn/OneDrive/Pictures/descarga.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/productCatalog/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"productCatalog",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Catalogo de Productos por Categoría",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3Mzk1MTQ3NDksImV4cCI6MTczOTUxODM0OX0.coQL4U6pjsDyoo2l1Z-mR5sNtzOsxfY9KOgJyU9hLqY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nameProduct",
+									"value": "Coca Cola",
+									"type": "text"
+								},
+								{
+									"key": "descriptionProduct",
+									"value": "dasdasdsa",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "Floristeria",
+									"type": "text"
+								},
+								{
+									"key": "imageProduct",
+									"type": "file",
+									"src": "/C:/Users/devyn/OneDrive/Pictures/descarga.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/productCatalog/category/67ad87eba065daa6c1ff8314",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"productCatalog",
+								"category",
+								"67ad87eba065daa6c1ff8314"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos Agotados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODJkY2RhYjE4NGZiNTA1YWFlZWEiLCJpYXQiOjE3NDAzNTA5OTUsImV4cCI6MTc0MDM1NDU5NX0.pq-uD6rcqEOlagqaNfjz-8YPQFjG9G2m-dBeBZPmx8c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/souldOut",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"souldOut"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2YTRkMTkwNGZkYTc4ZGVjZWY3NWIiLCJpYXQiOjE3NDAxMTMwMTEsImV4cCI6MTc0MDExNjYxMX0.s5ocHu7QgXnHhXdjhVIxZ2aHYd4-NFPmXZLhYdJG5yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/deleteProduct/67b6adec5e1a05b9d8133597",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"deleteProduct",
+								"67b6adec5e1a05b9d8133597"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top Selling Products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/product/topSellingProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"product",
+								"topSellingProducts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autenticación",
+			"item": [
+				{
+					"name": "Login Usuario",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Dev5\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Usuario",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Devyn",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Gomez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Dev6",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "devyn6@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef6a46e-b5f2-41b0-a6d5-c45f4aacd8f4"
+								},
+								{
+									"key": "phone",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Usuario Privado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODZjNzZlN2IyZjM2ZjNjY2RlZjMiLCJpYXQiOjE3NDA1Mzk2MDksImV4cCI6MTc0MDU0MzIwOX0.WYKzsGKuDSlyZDYx0m3AcbI_GkAMguN8F3WANU0Thbo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Devyn",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Gomez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "DevAdmin1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "DevAdmin1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef6a46e-b5f2-41b0-a6d5-c45f4aacd8f4"
+								},
+								{
+									"key": "phone",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/auth/admin/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"auth",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shooping Cart",
+			"item": [
+				{
+					"name": "Add Products to Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA5NDcxMjYsImV4cCI6MTc0MDk1MDcyNn0.Q3AgHgIoPWolsbciSGq7ZbRT6Ga2T0aTJMWK4_ny9LM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameProduct\":\"Juguetes\",\r\n    \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/shoopingCart/addProductCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"shoopingCart",
+								"addProductCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shooping Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA5NDg4MzUsImV4cCI6MTc0MDk1MjQzNX0.CmKvoPHuAf0-NuBId4h5Ixzg3SpJcs4vWgXBaXKEalA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/shoopingCart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"shoopingCart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Products to Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA3MDk0OTksImV4cCI6MTc0MDcxMzA5OX0.F9eEsZaCP8ztGHSfeewleg3-eotbh7hObsSIJ3tRBSQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameProduct\":\"Pepsi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/shoopingCart/deleteProductCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"shoopingCart",
+								"deleteProductCart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "Complete Purchase",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA3MTYwMTgsImV4cCI6MTc0MDcxOTYxOH0.S-SfpyABOhRIWRntM4nNj2FV1TgFAdBQo5dflsRxejk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/purchase/completePurchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"purchase",
+								"completePurchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History Purchase",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA5NDkxNjUsImV4cCI6MTc0MDk1Mjc2NX0.muUiTa8uw0g6hH_qCHk4TJGNjYtSI7_LfMez3k--4tw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/purchase/historyPurchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"purchase",
+								"historyPurchase"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Update Invoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA5NDcxMjYsImV4cCI6MTc0MDk1MDcyNn0.Q3AgHgIoPWolsbciSGq7ZbRT6Ga2T0aTJMWK4_ny9LM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"nameProduct\": \"Juguetes\",\r\n            \"quantity\": 1,\r\n            \"price\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/invoice/updateInvoice/67c1386473da2c65fd9ec7c1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"invoice",
+								"updateInvoice",
+								"67c1386473da2c65fd9ec7c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoice by User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlODBkNWUyODM0MWMxZmM3MjgwOTgiLCJpYXQiOjE3NDA5NDcxMjYsImV4cCI6MTc0MDk1MDcyNn0.Q3AgHgIoPWolsbciSGq7ZbRT6Ga2T0aTJMWK4_ny9LM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/storeManagement/v1/invoice/invoices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"storeManagement",
+								"v1",
+								"invoice",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

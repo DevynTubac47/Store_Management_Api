@@ -13,6 +13,7 @@ import productRoutes from "../src/product/product.routes.js"
 import cartRoutes from "../src/cart/cart.router.js"
 import purchaseRouter from "../src/purchase/purchase.router.js"
 import invoiceRouter from "../src/invoice/invoice.router.js"
+import { swaggerDocs, swaggerUi } from "./swagger.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -32,6 +33,7 @@ const routes = (app) =>{
     app.use("/storeManagement/v1/shoopingCart", cartRoutes)
     app.use("/storeManagement/v1/purchase", purchaseRouter)
     app.use("/storeManagement/v1/invoice", invoiceRouter)
+    app.use("/api-docs",swaggerUi.serve,swaggerUi.setup(swaggerDocs))
 }
 
 const conectarDB = async () =>{
