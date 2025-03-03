@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "67c5b1a5ca2c0e7773efbfdc"
+  },
+  "nameCategory": "General",
+  "descriptionCategory": "Esta categoría agrupa productos que no tienen una clasificación específica o que aún no han sido asignados a una categoría definida.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T13:41:57.395Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T13:41:57.395Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b954ca2c0e7773efc024"
+  },
+  "nameCategory": "Frutas y Verduras",
+  "descriptionCategory": "Esta categoría incluye una amplia variedad de productos frescos, como frutas, verduras, hierbas, y tubérculos. Ideal para una dieta saludable, con productos de temporada y orgánicos disponibles en muchos casos.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:14:44.970Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:14:44.970Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b960ca2c0e7773efc027"
+  },
+  "nameCategory": "Lácteos",
+  "descriptionCategory": "Comprende productos derivados de la leche como leche, queso, yogur, mantequilla y crema. Se ofrecen en diferentes presentaciones, desde productos enteros hasta opciones descremadas o sin lactosa.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:14:56.377Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:14:56.377Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b96eca2c0e7773efc02a"
+  },
+  "nameCategory": "Panadería",
+  "descriptionCategory": "Aquí se incluyen todo tipo de panes, bollería y productos de pastelería. Se ofrece pan fresco, baguettes, panes integrales, pasteles, galletas y croissants, tanto de fabricación artesanal como industrial.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:15:10.099Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:15:10.099Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b97bca2c0e7773efc02d"
+  },
+  "nameCategory": "Carnes y Embutidos",
+  "descriptionCategory": "Categoría que agrupa productos cárnicos frescos o procesados como carnes rojas, pollo, cerdo, pescados y mariscos, además de una variedad de embutidos como salchichones, jamones y chorizos.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:15:23.648Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:15:23.648Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b985ca2c0e7773efc030"
+  },
+  "nameCategory": "Congelados",
+  "descriptionCategory": "Esta categoría incluye productos alimenticios que se mantienen congelados para conservar su frescura por más tiempo. Se encuentran vegetales, carnes, pescados, helados y comidas preparadas congeladas.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:15:33.840Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:15:33.840Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b9a4ca2c0e7773efc036"
+  },
+  "nameCategory": "Bebidas",
+  "descriptionCategory": "Incluye todo tipo de bebidas no alcohólicas y alcohólicas, como jugos, refrescos, aguas embotelladas, té, café, cervezas, vinos y licores, con opciones de diferentes marcas y sabores.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:16:04.982Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:16:04.982Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b9b3ca2c0e7773efc039"
+  },
+  "nameCategory": "Higiene y Belleza",
+  "descriptionCategory": "Aquí se agrupan productos para el cuidado personal, como champús, jabones, cremas, desodorantes, productos de maquillaje y cuidado dental, así como productos de higiene femenina y pañales.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:16:19.612Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:16:19.612Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5c52dfb82b4ec6eeb388f"
+  },
+  "nameCategory": "Abarrotes",
+  "descriptionCategory": "Esta categoría incluye productos secos y envasados, como arroz, pasta, cereales, legumbres, aceite, azúcar, harina, especias y conservas. Son básicos para la despensa diaria.",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T15:05:17.691Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:05:17.691Z"
+  }
+}]

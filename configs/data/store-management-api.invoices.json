@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "67c5c641fb82b4ec6eeb38be"
+  },
+  "user": {
+    "$oid": "67c5b3edca2c0e7773efbfe6"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c5bb6dca2c0e7773efc052"
+      },
+      "nameProduct": "Manzana Roja",
+      "quantity": 1,
+      "price": 2,
+      "totalProduct": 2,
+      "_id": {
+        "$oid": "67c5c641fb82b4ec6eeb38bf"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67c5bb8dca2c0e7773efc057"
+      },
+      "nameProduct": "Lechuga Romana",
+      "quantity": 10,
+      "price": 11.5,
+      "totalProduct": 115,
+      "_id": {
+        "$oid": "67c5c641fb82b4ec6eeb38c0"
+      }
+    }
+  ],
+  "total": 117,
+  "purchaseDate": {
+    "$date": "2025-03-03T15:09:53.738Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-03T15:09:53.739Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:29:42.916Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5c966fb82b4ec6eeb38f9"
+  },
+  "user": {
+    "$oid": "67c5b3edca2c0e7773efbfe6"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c5bbcbca2c0e7773efc05c"
+      },
+      "nameProduct": "Leche Entera",
+      "quantity": 5,
+      "price": 30,
+      "totalProduct": 150,
+      "_id": {
+        "$oid": "67c5c966fb82b4ec6eeb38fa"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67c5bc2bca2c0e7773efc066"
+      },
+      "nameProduct": "Pan de Molde Integral",
+      "quantity": 30,
+      "price": 45.5,
+      "totalProduct": 1365,
+      "_id": {
+        "$oid": "67c5c966fb82b4ec6eeb38fb"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67c5bc8dca2c0e7773efc070"
+      },
+      "nameProduct": "Pechuga de Pollo",
+      "quantity": 25,
+      "price": 5,
+      "totalProduct": 125,
+      "_id": {
+        "$oid": "67c5c966fb82b4ec6eeb38fc"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67c5bca8ca2c0e7773efc075"
+      },
+      "nameProduct": "Chorizo Ibérico",
+      "quantity": 10,
+      "price": 6.5,
+      "totalProduct": 65,
+      "_id": {
+        "$oid": "67c5c966fb82b4ec6eeb38fd"
+      }
+    }
+  ],
+  "total": 1705,
+  "purchaseDate": {
+    "$date": "2025-03-03T15:23:18.377Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-03T15:23:18.378Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:23:18.378Z"
+  }
+}]

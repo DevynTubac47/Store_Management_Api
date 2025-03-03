@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "67c5b1a5ca2c0e7773efbfde"
+  },
+  "name": "Admin",
+  "surname": "Kinal",
+  "username": "Admin",
+  "email": "admin@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$AhIPuP3tGvIZ5jt2BljAdQ$QeQ6xQvuB3rxzVL2O8XWx2gNkO6pJ9NGbUGDb7UpdjI",
+  "profilePicture": "pictureAdmin.jpg",
+  "phone": "12345678",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T13:41:57.568Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T13:41:57.568Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b3edca2c0e7773efbfe6"
+  },
+  "name": "Samuel Alexander",
+  "surname": "Perez Cap",
+  "username": "Like Fox",
+  "email": "sperez@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$BjiH7wigUqPZpQ1KI/QE8g$2bAQYncFaPOJs1zLdwjuh34bB4/zUZAgR6ClR0mH+mc",
+  "profilePicture": "likefox-1741009901665.png",
+  "phone": "75315946",
+  "role": "CLIENT_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T13:51:41.810Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:04:32.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b516ca2c0e7773efbff0"
+  },
+  "name": "Diego Adolfo",
+  "surname": "Bercian Perez",
+  "username": "Dabp_",
+  "email": "dbercian@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$lFZARVU6/FykRx3QmGMaVw$K3T85rLjAwXRAlzheT6GmGy0sTSzcaOxPWTD6S1RTGk",
+  "profilePicture": "Mbappe-1741010198740.png",
+  "phone": "01478520",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T13:56:38.875Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T13:56:38.875Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b586ca2c0e7773efbff4"
+  },
+  "name": "Ramiro Donovan",
+  "surname": "Morales Lopez",
+  "username": "ramiro_zapp",
+  "email": "rmorales@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$QtScmHSUJnl+/WgdWi7fPA$l8QaLvBLOjOtKmTWJDxebXj7Bbp2VAIKetL1cnOGy4w",
+  "profilePicture": "raw-1741010310056.jpg",
+  "phone": "48592626",
+  "role": "CLIENT_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T13:58:30.174Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T13:58:30.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5b819ca2c0e7773efc01f"
+  },
+  "name": "Pablo David",
+  "surname": "Villela Loaiza",
+  "username": "pabloo",
+  "email": "pvillela@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$gAfG1BfKKbd73R/KajHjmg$3IcNtPqjX909KaZoQk/CbnK+npVM6HnvwM8fSJR7L04",
+  "profilePicture": "lego-1741010969451.png",
+  "phone": "48592626",
+  "role": "CLIENT_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:09:29.653Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:09:29.653Z"
+  }
+}]

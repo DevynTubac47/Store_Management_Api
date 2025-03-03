@@ -6,7 +6,7 @@ import Category from "../category/category.model.js";
 export const addProduct = async (req, res) => {
     try{
         const data = req.body;
-        const category = await Category.findOne({ category: data.category});
+        const category = await Category.findOne({ nameCategory: data.category });
         let imageProduct = req.file ? req.file.filename : null;
         data.imageProduct = imageProduct
 
@@ -106,7 +106,7 @@ export const getProductbyCategory = async (req, res) => {
         return res.status(500).json({
             success: false,
             message: 'Error when displaying the product catalog by category.',
-            error: error.menssge
+            error: error.messge
         })
     }
 }

@@ -1,0 +1,336 @@
+[{
+  "_id": {
+    "$oid": "67c5bb6dca2c0e7773efc052"
+  },
+  "nameProduct": "Manzana Roja",
+  "descriptionProduct": "Fruta fresca y crujiente, ideal para consumir sola o en ensaladas.",
+  "price": 6,
+  "stock": 110,
+  "category": {
+    "$oid": "67c5b954ca2c0e7773efc024"
+  },
+  "imageProduct": "producto-1741011821889.jpg",
+  "sales": 10,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:23:41.904Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:09:53.729Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bb8dca2c0e7773efc057"
+  },
+  "nameProduct": "Lechuga Romana",
+  "descriptionProduct": "Lechuga fresca de hoja crujiente, ideal para ensaladas.",
+  "price": 11.5,
+  "stock": 110,
+  "category": {
+    "$oid": "67c5b954ca2c0e7773efc024"
+  },
+  "imageProduct": "producto-1741011853388.jpg",
+  "sales": 10,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:24:13.398Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:09:53.734Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bbcbca2c0e7773efc05c"
+  },
+  "nameProduct": "Leche Entera",
+  "descriptionProduct": "Leche entera fresca de vaca, rica en calcio y vitaminas.",
+  "price": 30,
+  "stock": 75,
+  "category": {
+    "$oid": "67c5b960ca2c0e7773efc027"
+  },
+  "imageProduct": "producto-1741011915506.jpg",
+  "sales": 5,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:25:15.516Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:23:18.368Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bbfbca2c0e7773efc061"
+  },
+  "nameProduct": "Yogur Natural",
+  "descriptionProduct": "Yogur natural sin azúcar añadido, ideal para el desayuno o merienda.",
+  "price": 7.5,
+  "stock": 90,
+  "category": {
+    "$oid": "67c5b960ca2c0e7773efc027"
+  },
+  "imageProduct": "producto-1741011963250.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:26:03.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:26:03.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bc2bca2c0e7773efc066"
+  },
+  "nameProduct": "Pan de Molde Integral",
+  "descriptionProduct": "Pan de molde integral, ideal para sandwiches o para acompañar tus comidas.",
+  "price": 45.5,
+  "stock": 20,
+  "category": {
+    "$oid": "67c5b96eca2c0e7773efc02a"
+  },
+  "imageProduct": "producto-1741012011970.jpg",
+  "sales": 30,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:26:51.979Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:23:18.371Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bc4eca2c0e7773efc06b"
+  },
+  "nameProduct": "Croissants",
+  "descriptionProduct": "Deliciosos croissants de mantequilla, ideales para el desayuno.",
+  "price": 2.8,
+  "stock": 40,
+  "category": {
+    "$oid": "67c5b96eca2c0e7773efc02a"
+  },
+  "imageProduct": "producto-1741012046533.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:27:26.551Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:27:26.551Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bc8dca2c0e7773efc070"
+  },
+  "nameProduct": "Pechuga de Pollo",
+  "descriptionProduct": "Pechuga de pollo fresca, sin piel ni hueso, perfecta para hacer a la plancha o al horno.",
+  "price": 5,
+  "stock": 5,
+  "category": {
+    "$oid": "67c5b97bca2c0e7773efc02d"
+  },
+  "imageProduct": "producto-1741012109810.jpg",
+  "sales": 25,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:28:29.820Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:23:18.374Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bca8ca2c0e7773efc075"
+  },
+  "nameProduct": "Chorizo Ibérico",
+  "descriptionProduct": "Chorizo ibérico curado, ideal para tapas o para añadir a tus platos.",
+  "price": 6.5,
+  "stock": 50,
+  "category": {
+    "$oid": "67c5b97bca2c0e7773efc02d"
+  },
+  "imageProduct": "producto-1741012136866.jpg",
+  "sales": 10,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:28:56.876Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:23:18.375Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bce3ca2c0e7773efc07a"
+  },
+  "nameProduct": "Pastel Helado",
+  "descriptionProduct": "Pastel con relleno de helado, cubierto de crema y frutos rojos.",
+  "price": 150,
+  "stock": 100,
+  "category": {
+    "$oid": "67c5b985ca2c0e7773efc030"
+  },
+  "imageProduct": "producto-1741012195627.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:29:55.638Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:29:55.638Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bcffca2c0e7773efc07f"
+  },
+  "nameProduct": "Pescado Congelado",
+  "descriptionProduct": "Filetes de pescado blanco congelado, perfectos para preparar a la parrilla.",
+  "price": 15,
+  "stock": 75,
+  "category": {
+    "$oid": "67c5b985ca2c0e7773efc030"
+  },
+  "imageProduct": "producto-1741012223435.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:30:23.444Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:30:23.444Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bd1cca2c0e7773efc084"
+  },
+  "nameProduct": "Agua Mineral",
+  "descriptionProduct": "Agua mineral natural, refrescante y saludable.",
+  "price": 4.5,
+  "stock": 200,
+  "category": {
+    "$oid": "67c5b9a4ca2c0e7773efc036"
+  },
+  "imageProduct": "producto-1741012252597.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:30:52.610Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:30:52.610Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bd39ca2c0e7773efc089"
+  },
+  "nameProduct": "Jugo de Naranja",
+  "descriptionProduct": "Jugo natural de naranja, sin azúcares añadidos, fresco y delicioso.",
+  "price": 8.5,
+  "stock": 150,
+  "category": {
+    "$oid": "67c5b9a4ca2c0e7773efc036"
+  },
+  "imageProduct": "producto-1741012281824.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:31:21.835Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:31:21.835Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bd6cca2c0e7773efc08e"
+  },
+  "nameProduct": "Shampoo Herbal",
+  "descriptionProduct": "Shampoo herbal, con extractos naturales que cuidan y fortalecen tu cabello.",
+  "price": 75.5,
+  "stock": 60,
+  "category": {
+    "$oid": "67c5b9b3ca2c0e7773efc039"
+  },
+  "imageProduct": "producto-1741012332760.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:32:12.771Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:32:12.771Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bd89ca2c0e7773efc093"
+  },
+  "nameProduct": "Pasta Dental",
+  "descriptionProduct": "Pasta dental de menta, refresca tu aliento y protege tus dientes.",
+  "price": 10.5,
+  "stock": 110,
+  "category": {
+    "$oid": "67c5b9b3ca2c0e7773efc039"
+  },
+  "imageProduct": "producto-1741012361911.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:32:41.920Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:32:41.920Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5bdb0ca2c0e7773efc098"
+  },
+  "nameProduct": "Arroz Blanco",
+  "descriptionProduct": "Arroz blanco de grano largo.",
+  "price": 1.8,
+  "stock": 110,
+  "category": {
+    "$oid": "67c5b9bfca2c0e7773efc03c"
+  },
+  "imageProduct": "producto-1741012400780.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T14:33:20.789Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T14:33:20.789Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c5c560fb82b4ec6eeb3894"
+  },
+  "nameProduct": "Corbata Imperial",
+  "descriptionProduct": "Pasta espaguetis de trigo duro, ideal para preparar con salsa.",
+  "price": 12,
+  "stock": 50,
+  "category": {
+    "$oid": "67c5c52dfb82b4ec6eeb388f"
+  },
+  "imageProduct": "producto-1741014368096.jpg",
+  "sales": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-03T15:06:08.108Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T15:11:26.953Z"
+  }
+}]
